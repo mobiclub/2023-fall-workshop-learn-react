@@ -18,7 +18,7 @@ export const Button = ({
 	const circleShape = ['rounded-full',
 		size === 'sm' && 'p-1',
 		size === 'md' && 'p-2'];
-	
+
 	const roundedShape = ['rounded-md',
 		size === 'sm' && 'py-1 px-2',
 		size === 'md' && 'py-2 px-4'];

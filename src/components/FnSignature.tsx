@@ -23,8 +23,9 @@ export const FnSignature = ({
 
 	const argItems = fnArgs && fnArgs.map((arg, i) => {
 		const lastIndex = fnArgs.length - 1;
+		const uniqueKey = `${fnName}-arg-${i}-${arg.name}`;
 		return (
-			<span>
+			<span key={uniqueKey}>
 				<span className="text-slate-800">{arg.name}</span>
 				{arg.isOptional && <span className={innerSynTw}>?</span>}
 				{i !== lastIndex && <span className={innerSynTw}>,</span>}
