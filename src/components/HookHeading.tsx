@@ -28,6 +28,7 @@ export const HookHeadingLink = ({hookName}: {hookName: string}) => {
 	const styles = twMerge(
 		'flex flex-row items-center gap-1',
 		'text-slate-500',
+		'border-b border-b-white',
 		'hover:border-b hover:border-b-slate-500'
 	)
 
