@@ -1,0 +1,58 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore(deps/npm):"
+    labels:
+      - "t-dependencies"
+      - "pkg-npm"
+    open-pull-requests-limit: 4
+    groups:
+      typescript:
+        patterns:
+          - "typescript"
+          - "eslint"
+          - "eslint-config-*"
+          - "eslint-plugin-*"
+          - "@typescript-eslint/*"
+      react-mdx:
+        patterns:
+          - "@next/mdx"
+          - "@mdx-js/*"
+          - "@types/mdx"
+      react-next:
+        patterns:
+          - "@headlessui/react"
+          - "@types/react"
+          - "@types/react-*"
+          - "@tabler/icons-react"
+          - "next"
+          - "react"
+          - "react-dom"
+          - "react-error-boundary"
+          - "react-html-props"
+      css:
+        patterns:
+          - "tailwind"
+          - "tailwind-merge"
+          - "postcss"
+          - "autoprefixer"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "chore(deps/actions):"
+    labels:
+      - "t-dependencies"
+      - "pkg-gh-actions"
+    open-pull-requests-limit: 4
