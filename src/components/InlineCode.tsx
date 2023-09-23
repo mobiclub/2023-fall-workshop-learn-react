@@ -28,7 +28,7 @@ InlineCode.FnSignature = ({
 	fnNameClassName,
 	...props
 }: InlineCodeFnSignatureProps) => {
-	const fnNameTw = 'text-purple-700';
+	const fnNameTw = twMerge('text-purple-700', fnNameClassName);
 	const outerSynTw = 'text-slate-400';
 	const innerSynTw = 'text-slate-300';
 
@@ -45,10 +45,14 @@ InlineCode.FnSignature = ({
 
 	return (
 		<InlineCode className="bg-[unset]" {...props}>
-			<span className={twMerge(fnNameTw, fnNameClassName)}>{fnName}</span>
-			<span className={outerSynTw}>(</span>
-			{argItems && <span className="flex flex-row gap-1">{argItems}</span>}
-			<span className={outerSynTw}>)</span>
+			<span className={fnNameTw}>{fnName}</span>
+			{argItems.length !== 0
+				? <>
+					<span className={outerSynTw}>(</span>
+					<span className="flex flex-row gap-1">{argItems}</span>
+					<span className={outerSynTw}>)</span>
+				</>
+				: <span className={outerSynTw}>()</span>}
 		</InlineCode>
 	)
 }
