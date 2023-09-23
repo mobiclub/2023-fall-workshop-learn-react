@@ -5,8 +5,7 @@ import { FnHeading } from '@/components/FnHeading';
 import { Header } from '@/components/Header';
 import { LinkPreview } from '@/components/LinkPreview';
 import { Slide } from '@/components/Slide';
-import { SectionProps } from 'react-html-props';
-import { ReactNode } from 'react';
+import { KeyValuePair } from '@/components/KeyValuePair';
 
 export default function Home() {
 	return (
@@ -84,7 +83,7 @@ export default function Home() {
 						url='https://developer.mozilla.org/en-US/'
 						desc='Documentation for HTML, CSS, JS, and more. Created by Mozilla, co-maintained by the open-source community.' />
 					<LinkPreview
-						siteName='Next.js Docs'
+						siteName='Next.js'
 						url='https://nextjs.org/docs'
 						desc='Documentation for the Next.js framework by Vercel, made for writing full-stack React applications.' />
 					<LinkPreview
@@ -98,18 +97,5 @@ export default function Home() {
 				</div>
 			</Slide>
 		</main>
-	)
-}
-
-export type KeyValuePairProps = SectionProps & {
-	k: ReactNode,
-	v: ReactNode,
-}
-export const KeyValuePair = ({k, v}: KeyValuePairProps) => {
-	return (
-		<section className="flex flex-col gap-2">
-			<p className='uppercase'>{k}</p>
-			<p className='text-xl'>{v}</p>
-		</section>
 	)
 }
