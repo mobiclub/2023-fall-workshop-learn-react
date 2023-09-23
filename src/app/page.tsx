@@ -1,4 +1,4 @@
-import { Button, FloatingButton } from '@/components/Button';
+import { Button } from '@/components/Button';
 import { CodeBlock } from '@/components/CodeBlock';
 import { Header } from '@/components/Header';
 import { HookHeading } from '@/components/HookHeading';
@@ -13,9 +13,6 @@ export default function Home() {
 				<Button kind="tertiary"><IconArrowLeft size={24} /></Button>
 				<Button kind="tertiary"><IconArrowRight size={24} /></Button>
 			</div>
-			{/* <FloatingButton>
-				<IconArrowDown size={24} />
-			</FloatingButton> */}
 			<Slide className="p-24 justify-between">
 				<header className="flex flex-col gap-8 items-start">
 					<div className="flex flex-col gap-1 items-start">
