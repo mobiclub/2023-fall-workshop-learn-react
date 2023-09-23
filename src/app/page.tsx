@@ -10,8 +10,8 @@ export default function Home() {
 		<main className="text-slate-800">
 			<Header />
 			<div className='fixed bottom-0 right-0 m-4 p-4 flex flex-row gap-2'>
-				<Button kind="tertiary" className='border border-slate-200 drop-shadow-sm'><IconArrowLeft size={24} /></Button>
-				<Button kind="tertiary" className='border border-slate-200 drop-shadow-sm'><IconArrowRight size={24} /></Button>
+				<Button kind="tertiary"><IconArrowLeft size={24} /></Button>
+				<Button kind="tertiary"><IconArrowRight size={24} /></Button>
 			</div>
 			{/* <FloatingButton>
 				<IconArrowDown size={24} />

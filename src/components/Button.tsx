@@ -29,7 +29,7 @@ export const Button = ({
 		shape === 'circle' && circleShape,
 		kind === 'primary' && 'bg-slate-800 text-white',
 		kind === 'secondary' && 'bg-white text-slate-800 border-2 border-slate-800',
-		kind === 'tertiary' && 'bg-white text-slate-800',
+		kind === 'tertiary' && 'bg-white text-slate-800 border border-slate-200 drop-shadow-sm',
 		className,
 	)
 
