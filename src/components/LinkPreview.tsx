@@ -1,3 +1,4 @@
+import { IconPlaceholder } from '@tabler/icons-react';
 import Link from 'next/link';
 import { SectionProps } from 'react-html-props';
 
@@ -13,12 +14,17 @@ export const LinkPreview = ({siteName, url, desc, ...props}: LinkPreviewProps) =
 
 	return (
 		<section
-			className="flex flex-col gap-2 p-4 rounded-md bg-white border border-slate-200 drop-shadow-sm"
+			className="flex flex-row gap-4 items-start p-4 rounded-md bg-white border border-slate-200 drop-shadow-sm"
 			{...props}
 		>
-			<h3 className="font-semibold">{siteName}</h3>
-			<span>{desc}</span>
-			<Link href={url} className='text-blue-600'>{prettyUrl}</Link>
+			<div className="p-2 rounded-md bg-slate-200">
+				<IconPlaceholder size={20} />
+			</div>
+			<div className="flex flex-col gap-2">
+				<h3 className="font-semibold">{siteName}</h3>
+				<span>{desc}</span>
+				<Link href={url} className='text-blue-600'>{prettyUrl}</Link>
+			</div>
 		</section>
 	)
 }
