@@ -26,7 +26,7 @@ export const FnSignature = ({
 	const innerSynTw = 'text-slate-300';
 	const argListTw = twMerge("flex flex-row gap-1", fnArgListClassName);
 
-	const argItems = fnArgs && fnArgs.map((arg, i) => {
+	const argList = fnArgs && fnArgs.map((arg, i) => {
 		const lastIndex = fnArgs.length - 1;
 		const uniqueKey = `${fnName}-arg-${i}-${arg.name}`;
 		return (
@@ -41,10 +41,10 @@ export const FnSignature = ({
 	return (
 		<InlineCode className="bg-[unset]" {...props}>
 			<span className={fnNameTw}>{fnName}</span>
-			{argItems.length !== 0
+			{argList.length !== 0
 				? <>
 					<span className={outerSynTw}>(</span>
-					<span className={argListTw}>{argItems}</span>
+					<span className={argListTw}>{argList}</span>
 					<span className={outerSynTw}>)</span>
 				</>
 				: <span className={outerSynTw}>()</span>}
