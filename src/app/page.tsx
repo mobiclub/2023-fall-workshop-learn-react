@@ -1,20 +1,14 @@
 import { Button, FloatingButton } from '@/components/Button';
 import { CodeBlock } from '@/components/CodeBlock';
+import { Header } from '@/components/Header';
 import { HookHeading } from '@/components/HookHeading';
 import { Slide } from '@/components/Slide';
-import { IconArrowLeft, IconArrowRight, IconBrandGithubFilled, IconMenuDeep } from '@tabler/icons-react';
+import { IconArrowLeft, IconArrowRight, IconBrandGithubFilled } from '@tabler/icons-react';
 
 export default function Home() {
 	return (
 		<main className="text-slate-800">
-			<header className="sticky top-0 mb-[-100px] flex flex-row p-8">
-				<IconMenuDeep
-					size={36}
-					strokeWidth={1.5}
-					strokeLinecap='square'
-					shapeRendering='crispEdges'
-					className='cursor-pointer ml-auto' />
-			</header>
+			<Header />
 			<div className='fixed bottom-0 right-0 m-4 p-4 flex flex-row gap-2'>
 				<Button kind="tertiary" className='border border-slate-200 drop-shadow-sm'><IconArrowLeft size={24} /></Button>
 				<Button kind="tertiary" className='border border-slate-200 drop-shadow-sm'><IconArrowRight size={24} /></Button>
