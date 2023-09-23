@@ -51,7 +51,7 @@ export default function Home() {
 			</Slide>
 			<Slide className='p-24 gap-8' slideNum={{current: 3, total: 23}}>
 				<FnHeading fnName='useEffect' fnArgs={[
-					{name: 'effect', isOptional: false},
+					{name: 'effect'},
 					{name: 'dependencies', isOptional: true},
 				]} />
 				<div className="flex flex-col gap-2 max-w-[70ch]">
@@ -64,7 +64,7 @@ export default function Home() {
 			</Slide>
 			<Slide className='p-24 gap-8' slideNum={{current: 4, total: 23}}>
 				<FnHeading fnName='useState' fnArgs={[
-					{name: 'initialState', isOptional: false},
+					{name: 'initialState'},
 				]} />
 				<div className="flex flex-col gap-2 max-w-[70ch]">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt volutpat interdum. Curabitur hendrerit aliquam auctor. Donec vestibulum ex eget pellentesque semper. Donec auctor bibendum erat, fermentum posuere mauris pulvinar ut.</p>

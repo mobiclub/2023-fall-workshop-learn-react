@@ -15,7 +15,7 @@ export const InlineCode = ({ children, className, ...props }: InlineCodeProps) =
 
 export type InlineCodeFnArg = {
 	name: string,
-	isOptional: boolean,
+	isOptional?: boolean,
 }
 export type InlineCodeFnSignatureProps = InlineCodeProps & {
 	fnName: string,
