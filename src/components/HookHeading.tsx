@@ -3,31 +3,32 @@ import { InlineCode, InlineCodeFnArg } from './InlineCode'
 import { IconExternalLink } from '@tabler/icons-react'
 import { twMerge } from 'tailwind-merge'
 
-export type HookHeadingProps = {
-	hookName: string,
+export type FnHeadingProps = {
+	fnName: string,
 	fnArgs?: InlineCodeFnArg[],
 }
-export const HookHeading = ({hookName, fnArgs}: HookHeadingProps) => {
+export const FnHeading = ({fnName, fnArgs}: FnHeadingProps) => {
 	const Separator = () => <span className="text-sm text-slate-400 select-none" aria-hidden>/</span>;
 
 	return (
 		<header className='flex flex-col gap-4'>
 			<h2 className="text-2xl">
-				<InlineCode.FnSignature fnName={hookName} fnNameClassName="text-blue-700" />
+				<InlineCode.FnSignature fnName={fnName} fnNameClassName="text-blue-700" />
 			</h2>
 			<span className="flex flex-row gap-4 items-center text-l">
-				<InlineCode.FnSignature fnName={hookName} fnArgs={fnArgs} />
+				<InlineCode.FnSignature fnName={fnName} fnArgs={fnArgs} />
 				<Separator />
-				<HookHeadingLink hookName={hookName} />
+				<FnHeadingLink fnName={fnName} baseUrl='https://react.dev/reference/react/' />
 			</span>
 		</header>
 	)
 }
 
-export type HookHeadingLinkProps = Omit<LinkProps, 'href'> & {
-	hookName: string,
+export type FnHeadingLinkProps = Omit<LinkProps, 'href'> & {
+	fnName: string,
+	baseUrl: string,
 }
-export const HookHeadingLink = ({hookName}: HookHeadingLinkProps) => {
+export const FnHeadingLink = ({fnName, baseUrl}: FnHeadingLinkProps) => {
 	const styles = twMerge(
 		'flex flex-row items-center gap-1',
 		'text-slate-500',
@@ -37,7 +38,7 @@ export const HookHeadingLink = ({hookName}: HookHeadingLinkProps) => {
 
 	return (
 		<Link
-			href={`https://react.dev/reference/react/${hookName}`}
+			href={`${baseUrl}${fnName}`}
 			target='_blank'
 			className={styles}
 		>

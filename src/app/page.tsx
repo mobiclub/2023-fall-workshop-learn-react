@@ -1,7 +1,7 @@
 import { Button } from '@/components/Button';
 import { CodeBlock } from '@/components/CodeBlock';
 import { Header } from '@/components/Header';
-import { HookHeading } from '@/components/HookHeading';
+import { FnHeading } from '@/components/HookHeading';
 import { Slide } from '@/components/Slide';
 import { IconArrowLeft, IconArrowRight, IconBrandGithubFilled } from '@tabler/icons-react';
 
@@ -50,7 +50,7 @@ export default function Home() {
 				</div>
 			</Slide>
 			<Slide className='p-24 gap-8' slideNum={{current: 3, total: 23}}>
-				<HookHeading hookName='useEffect' fnArgs={[
+				<FnHeading fnName='useEffect' fnArgs={[
 					{name: 'effect', isOptional: false},
 					{name: 'dependencies', isOptional: true},
 				]} />
@@ -63,7 +63,7 @@ export default function Home() {
 				</div>
 			</Slide>
 			<Slide className='p-24 gap-8' slideNum={{current: 4, total: 23}}>
-				<HookHeading hookName='useState' fnArgs={[
+				<FnHeading fnName='useState' fnArgs={[
 					{name: 'initialState', isOptional: false},
 				]} />
 				<div className="flex flex-col gap-2 max-w-[70ch]">
