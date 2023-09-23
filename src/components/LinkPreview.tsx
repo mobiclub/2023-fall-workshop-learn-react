@@ -8,7 +8,8 @@ export type LinkPreviewProps = SectionProps & {
 }
 export const LinkPreview = ({siteName, url, desc, ...props}: LinkPreviewProps) => {
 	const urlObject = new URL(url);
-	const prettyUrl = `${urlObject.hostname}${urlObject.pathname}`;
+	const prettyPathName = urlObject.pathname !== '/' ? urlObject.pathname : '';
+	const prettyUrl = `${urlObject.hostname}${prettyPathName}`;
 
 	return (
 		<section
