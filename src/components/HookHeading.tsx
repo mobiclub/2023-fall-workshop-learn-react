@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link, { LinkProps } from 'next/link'
 import { InlineCode, InlineCodeFnArg } from './InlineCode'
 import { IconExternalLink } from '@tabler/icons-react'
 import { twMerge } from 'tailwind-merge'
@@ -24,7 +24,10 @@ export const HookHeading = ({hookName, fnArgs}: HookHeadingProps) => {
 	)
 }
 
-export const HookHeadingLink = ({hookName}: {hookName: string}) => {
+export type HookHeadingLinkProps = Omit<LinkProps, 'href'> & {
+	hookName: string,
+}
+export const HookHeadingLink = ({hookName}: HookHeadingLinkProps) => {
 	const styles = twMerge(
 		'flex flex-row items-center gap-1',
 		'text-slate-500',
