@@ -34,6 +34,7 @@ export const HookHeadingLink = ({hookName}: {hookName: string}) => {
 	return (
 		<Link
 			href={`https://react.dev/reference/react/${hookName}`}
+			target='_blank'
 			className={styles}
 		>
 			Docs
