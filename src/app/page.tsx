@@ -12,7 +12,7 @@ export default function Home() {
 	return (
 		<main className="text-slate-800">
 			<Header />
-			<div className='fixed bottom-0 right-0 m-4 p-4 flex flex-row gap-2'>
+			<div className='fixed bottom-0 right-0 m-4 p-4 flex flex-row gap-2 z-10'>
 				<Button kind="tertiary"><IconArrowLeft size={24} /></Button>
 				<Button kind="tertiary"><IconArrowRight size={24} /></Button>
 			</div>
