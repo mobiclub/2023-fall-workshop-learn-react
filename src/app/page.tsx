@@ -5,6 +5,8 @@ import { FnHeading } from '@/components/FnHeading';
 import { Header } from '@/components/Header';
 import { LinkPreview } from '@/components/LinkPreview';
 import { Slide } from '@/components/Slide';
+import { SectionProps } from 'react-html-props';
+import { ReactNode } from 'react';
 
 export default function Home() {
 	return (
@@ -26,18 +28,9 @@ export default function Home() {
 					</div>
 				</header>
 				<section className="flex flex-row gap-8">
-					<section className="flex flex-col gap-2">
-						<p className='uppercase'>Location</p>
-						<p className='text-xl'>UH 121</p>
-					</section>
-					<section className="flex flex-col gap-2">
-						<p className='uppercase'>Date</p>
-						<p className='text-xl'>October 4<sup>th</sup>, 2023</p>
-					</section>
-					<section className="flex flex-col gap-2">
-						<p className='uppercase'>Time</p>
-						<p className='text-xl'>6:00 to 8:00 PM</p>
-					</section>
+					<KeyValuePair k='Location' v='UH 121' />
+					<KeyValuePair k='Date' v={<>October 4<sup>th</sup>, 2023</>} />
+					<KeyValuePair k='Time' v='6:00 to 8:00 PM' />
 				</section>
 			</Slide>
 			<Slide>
@@ -105,5 +98,18 @@ export default function Home() {
 				</div>
 			</Slide>
 		</main>
+	)
+}
+
+export type KeyValuePairProps = SectionProps & {
+	k: ReactNode,
+	v: ReactNode,
+}
+export const KeyValuePair = ({k, v}: KeyValuePairProps) => {
+	return (
+		<section className="flex flex-col gap-2">
+			<p className='uppercase'>{k}</p>
+			<p className='text-xl'>{v}</p>
+		</section>
 	)
 }
