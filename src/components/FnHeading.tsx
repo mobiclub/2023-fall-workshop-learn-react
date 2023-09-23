@@ -3,6 +3,7 @@ import Link, { LinkProps } from 'next/link'
 import { twMerge } from 'tailwind-merge'
 
 import { FnSignature, FnSignatureArg } from '@/components/FnSignature'
+import { Heading } from '@/components/Heading'
 
 export type FnHeadingProps = {
 	fnName: string,
@@ -13,11 +14,11 @@ export const FnHeading = ({fnName, fnArgs}: FnHeadingProps) => {
 
 	return (
 		<header className='flex flex-col gap-4'>
-			<h2 className="text-2xl">
+			<Heading level={2}>
 				<FnSignature
 					fnName={fnName}
 					fnNameClassName="text-blue-700" />
-			</h2>
+			</Heading>
 			<span className="flex flex-row gap-4 items-center text-l">
 				<FnSignature
 					fnName={fnName}
