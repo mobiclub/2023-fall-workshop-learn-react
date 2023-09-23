@@ -7,25 +7,30 @@ export type FnSignatureArg = {
 }
 export type FnSignatureProps = InlineCodeProps & {
 	fnName: string,
-	fnArgs?: FnSignatureArg[],
 	fnNameClassName?: string,
+	fnArgs?: FnSignatureArg[],
+	fnArgClassName?: string,
+	fnArgListClassName?: string,
 }
 
 export const FnSignature = ({
 	fnName,
-	fnArgs = [],
 	fnNameClassName,
+	fnArgs = [],
+	fnArgClassName,
+	fnArgListClassName,
 	...props
 }: FnSignatureProps) => {
 	const fnNameTw = twMerge('text-purple-700', fnNameClassName);
 	const outerSynTw = 'text-slate-400';
 	const innerSynTw = 'text-slate-300';
+	const argListTw = twMerge("flex flex-row gap-1", fnArgListClassName);
 
 	const argItems = fnArgs && fnArgs.map((arg, i) => {
 		const lastIndex = fnArgs.length - 1;
 		const uniqueKey = `${fnName}-arg-${i}-${arg.name}`;
 		return (
-			<span key={uniqueKey}>
+			<span key={uniqueKey} className={argListTw}>
 				<span className="text-slate-800">{arg.name}</span>
 				{arg.isOptional && <span className={innerSynTw}>?</span>}
 				{i !== lastIndex && <span className={innerSynTw}>,</span>}
@@ -39,7 +44,7 @@ export const FnSignature = ({
 			{argItems.length !== 0
 				? <>
 					<span className={outerSynTw}>(</span>
-					<span className="flex flex-row gap-1">{argItems}</span>
+					<span className={argListTw}>{argItems}</span>
 					<span className={outerSynTw}>)</span>
 				</>
 				: <span className={outerSynTw}>()</span>}
