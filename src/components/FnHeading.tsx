@@ -13,12 +13,18 @@ export const FnHeading = ({fnName, fnArgs}: FnHeadingProps) => {
 	return (
 		<header className='flex flex-col gap-4'>
 			<h2 className="text-2xl">
-				<InlineCode.FnSignature fnName={fnName} fnNameClassName="text-blue-700" />
+				<InlineCode.FnSignature
+					fnName={fnName}
+					fnNameClassName="text-blue-700" />
 			</h2>
 			<span className="flex flex-row gap-4 items-center text-l">
-				<InlineCode.FnSignature fnName={fnName} fnArgs={fnArgs} />
+				<InlineCode.FnSignature
+					fnName={fnName}
+					fnArgs={fnArgs} />
 				<Separator />
-				<FnHeadingLink fnName={fnName} baseUrl='https://react.dev/reference/react/' />
+				<FnHeadingLink
+					fnName={fnName}
+					baseUrl='https://react.dev/reference/react/' />
 			</span>
 		</header>
 	)

@@ -1,7 +1,7 @@
 import { Button } from '@/components/Button';
 import { CodeBlock } from '@/components/CodeBlock';
 import { Header } from '@/components/Header';
-import { FnHeading } from '@/components/HookHeading';
+import { FnHeading } from '@/components/FnHeading';
 import { Slide } from '@/components/Slide';
 import { IconArrowLeft, IconArrowRight, IconBrandGithubFilled } from '@tabler/icons-react';
 
