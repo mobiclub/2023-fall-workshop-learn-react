@@ -34,12 +34,16 @@ export default function Home() {
 					<KeyValuePair k='Time' v='6:00 to 8:00 PM' />
 				</section>
 			</Slide>
+			<Slide className='p-24'>
+				<Heading level={2}>What is React all about?</Heading>
+
+			</Slide>
 			<Slide>
 				<div className="grid grid-cols-2 h-full">
-					<section className="bg-slate-50 p-4">
+					<section className="bg-slate-50 p-24">
 						Column 1
 					</section>
-					<section className="bg-white p-4">
+					<section className="bg-white p-24">
 						Column 2
 					</section>
 				</div>
@@ -85,11 +89,11 @@ export default function Home() {
 						url='https://developer.mozilla.org/en-US/'
 						desc='Documentation for HTML, CSS, JS, and more. Created by Mozilla, co-maintained by the open-source community.' />
 					<LinkPreview
-						siteName='Next.js Docs'
+						siteName='Next.js'
 						url='https://nextjs.org/docs'
 						desc='Documentation for the Next.js framework by Vercel, made for writing full-stack React applications.' />
 					<LinkPreview
-						siteName='Vite'
+						siteName='Vite.js'
 						url='https://vitejs.dev/'
 						desc='A modern build tool and development server by Evan You, also fantastic for creating React applications.' />
 					<LinkPreview
