@@ -83,7 +83,7 @@ export default function Home() {
 						url='https://developer.mozilla.org/en-US/'
 						desc='Documentation for HTML, CSS, JS, and more. Created by Mozilla, co-maintained by the open-source community.' />
 					<LinkPreview
-						siteName='Next.js'
+						siteName='Next.js Docs'
 						url='https://nextjs.org/docs'
 						desc='Documentation for the Next.js framework by Vercel, made for writing full-stack React applications.' />
 					<LinkPreview
