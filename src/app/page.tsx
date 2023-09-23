@@ -5,8 +5,7 @@ import { FnHeading } from '@/components/FnHeading';
 import { Header } from '@/components/Header';
 import { LinkPreview } from '@/components/LinkPreview';
 import { Slide } from '@/components/Slide';
-import { SectionProps } from 'react-html-props';
-import { ReactNode } from 'react';
+import { KeyValuePair } from '@/components/KeyValuePair';
 
 export default function Home() {
 	return (
@@ -98,18 +97,5 @@ export default function Home() {
 				</div>
 			</Slide>
 		</main>
-	)
-}
-
-export type KeyValuePairProps = SectionProps & {
-	k: ReactNode,
-	v: ReactNode,
-}
-export const KeyValuePair = ({k, v}: KeyValuePairProps) => {
-	return (
-		<section className="flex flex-col gap-2">
-			<p className='uppercase'>{k}</p>
-			<p className='text-xl'>{v}</p>
-		</section>
 	)
 }
