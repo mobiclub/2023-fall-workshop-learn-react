@@ -98,6 +98,10 @@ export default function Home() {
 						siteName='Vite'
 						url='https://vitejs.dev/'
 						desc='A modern build tool and development server by Evan You, also fantastic for creating React applications.' />
+					<LinkPreview
+						siteName='Reactiflux Discod'
+						url='https://discord.gg/reactiflux'
+						desc='A friendly, online Discord community with over 200K members. Frequently hosts Q&As with engineers in the industry!' />
 				</div>
 			</Slide>
 		</main>
