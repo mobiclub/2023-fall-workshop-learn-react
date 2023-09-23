@@ -1,11 +1,12 @@
 import { IconArrowLeft, IconArrowRight, IconBrandGithubFilled } from '@tabler/icons-react';
+
 import { Button } from '@/components/Button';
 import { CodeBlock } from '@/components/CodeBlock';
 import { FnHeading } from '@/components/FnHeading';
 import { Header } from '@/components/Header';
+import { KeyValuePair } from '@/components/KeyValuePair';
 import { LinkPreview } from '@/components/LinkPreview';
 import { Slide } from '@/components/Slide';
-import { KeyValuePair } from '@/components/KeyValuePair';
 
 export default function Home() {
 	return (

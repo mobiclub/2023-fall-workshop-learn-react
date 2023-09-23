@@ -1,7 +1,8 @@
-import Link, { LinkProps } from 'next/link'
-import { FnSignature, FnSignatureArg } from '@/components/FnSignature'
 import { IconExternalLink } from '@tabler/icons-react'
+import Link, { LinkProps } from 'next/link'
 import { twMerge } from 'tailwind-merge'
+
+import { FnSignature, FnSignatureArg } from '@/components/FnSignature'
 
 export type FnHeadingProps = {
 	fnName: string,
