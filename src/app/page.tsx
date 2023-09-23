@@ -4,6 +4,7 @@ import { Button } from '@/components/Button';
 import { CodeBlock } from '@/components/CodeBlock';
 import { FnHeading } from '@/components/FnHeading';
 import { Header } from '@/components/Header';
+import { Heading } from '@/components/Heading';
 import { KeyValuePair } from '@/components/KeyValuePair';
 import { LinkPreview } from '@/components/LinkPreview';
 import { Slide } from '@/components/Slide';
@@ -19,8 +20,8 @@ export default function Home() {
 			<Slide className="p-24 justify-between">
 				<header className="flex flex-col gap-8 items-start">
 					<div className="flex flex-col gap-1 items-start">
-						<h1 className="text-5xl font-medium">Intro to React Workshop</h1>
-						<span className="text-2xl">MOBI x HackUTA</span>
+						<Heading level={1}>Intro to React Workshop</Heading>
+						<Heading level={2}>MOBI x HackUTA</Heading>
 					</div>
 					<div className="flex flex-row gap-4">
 						<Button kind='primary'>Enter <IconArrowRight size={24} /></Button>
