@@ -1,11 +1,11 @@
 import Link, { LinkProps } from 'next/link'
-import { InlineCode, InlineCodeFnArg } from './InlineCode'
+import { FnSignature, FnSignatureArg } from '@/components/FnSignature'
 import { IconExternalLink } from '@tabler/icons-react'
 import { twMerge } from 'tailwind-merge'
 
 export type FnHeadingProps = {
 	fnName: string,
-	fnArgs?: InlineCodeFnArg[],
+	fnArgs?: FnSignatureArg[],
 }
 export const FnHeading = ({fnName, fnArgs}: FnHeadingProps) => {
 	const Separator = () => <span className="text-sm text-slate-400 select-none" aria-hidden>/</span>;
@@ -13,12 +13,12 @@ export const FnHeading = ({fnName, fnArgs}: FnHeadingProps) => {
 	return (
 		<header className='flex flex-col gap-4'>
 			<h2 className="text-2xl">
-				<InlineCode.FnSignature
+				<FnSignature
 					fnName={fnName}
 					fnNameClassName="text-blue-700" />
 			</h2>
 			<span className="flex flex-row gap-4 items-center text-l">
-				<InlineCode.FnSignature
+				<FnSignature
 					fnName={fnName}
 					fnArgs={fnArgs} />
 				<Separator />
