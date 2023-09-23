@@ -16,7 +16,7 @@ export const HookHeading = ({hookName, fnArgs}: HookHeadingProps) => {
 				<InlineCode.FnSignature fnName={hookName} fnNameClassName="text-blue-700" />
 			</h2>
 			<span className="flex flex-row gap-4 items-center ml-1 text-l">
-				<InlineCode.FnSignature fnName="useEffect" fnArgs={fnArgs} />
+				<InlineCode.FnSignature fnName={hookName} fnArgs={fnArgs} />
 				<Separator />
 				<HookHeadingLink hookName={hookName} />
 			</span>
