@@ -1,6 +1,6 @@
 import { SyntaxHighlighterProps } from 'react-syntax-highlighter'
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight'
-import { Button } from './Button'
+import { Button } from '@/components/Button'
 import { IconClipboard } from '@tabler/icons-react'
 
 export type CodeBlockProps = SyntaxHighlighterProps & {

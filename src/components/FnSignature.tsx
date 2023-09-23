@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { InlineCodeProps, InlineCode } from './InlineCode';
+import { InlineCodeProps, InlineCode } from '@/components/InlineCode';
 
 export type FnSignatureArg = {
 	name: string,
