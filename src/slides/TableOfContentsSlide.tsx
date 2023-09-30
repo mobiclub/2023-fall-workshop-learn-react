@@ -1,8 +1,7 @@
 import { Heading } from '@/components/Heading'
+import { SlideProps, SlideSplit } from '@/components/Slide'
 
-import { SlideSplit, SlideSplitProps } from '../components/Slide'
-
-export type TableOfContentsProps = SlideSplitProps
+export type TableOfContentsProps = SlideProps
 export const TableOfContents = ({ children, className, slideNum, ...props }: TableOfContentsProps) => {
 	return (
 		<SlideSplit {...props}

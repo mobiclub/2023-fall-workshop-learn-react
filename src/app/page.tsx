@@ -39,8 +39,8 @@ export default function Home() {
 			<Slide className='p-24'>
 				<Heading level={2}>What is React all about?</Heading>
 			</Slide>
-			<TableOfContents slideNum={{current: 2, total: 24}}/>
-			<ComponentsSlide slideNum={{current: 3, total: 24}}/>
+			<TableOfContents slideNum={{current: 2, total: 24}} />
+			<ComponentsSlide slideNum={{current: 3, total: 24}} />
 			<Slide className='p-24 gap-8' slideNum={{current: 4, total: 24}}>
 				<FnHeading fnName='useEffect' fnArgs={[
 					{name: 'effect'},
