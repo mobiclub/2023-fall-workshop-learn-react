@@ -8,6 +8,8 @@ import { Heading } from '@/components/Heading';
 import { KeyValuePair } from '@/components/KeyValuePair';
 import { LinkPreview } from '@/components/LinkPreview';
 import { Slide } from '@/components/Slide';
+import { ComponentsSlide } from '@/slides/ComponentsSlide';
+import { TableOfContents } from '@/slides/TableOfContentsSlide';
 
 export default function Home() {
 	return (
@@ -36,19 +38,10 @@ export default function Home() {
 			</Slide>
 			<Slide className='p-24'>
 				<Heading level={2}>What is React all about?</Heading>
-
 			</Slide>
-			<Slide>
-				<div className="grid grid-cols-2 h-full">
-					<section className="bg-slate-50 p-24">
-						Column 1
-					</section>
-					<section className="bg-white p-24">
-						Column 2
-					</section>
-				</div>
-			</Slide>
-			<Slide className='p-24 gap-8' slideNum={{current: 3, total: 23}}>
+			<TableOfContents slideNum={{current: 2, total: 24}} />
+			<ComponentsSlide slideNum={{current: 3, total: 24}} />
+			<Slide className='p-24 gap-8' slideNum={{current: 4, total: 24}}>
 				<FnHeading fnName='useEffect' fnArgs={[
 					{name: 'effect'},
 					{name: 'dependencies', isOptional: true},

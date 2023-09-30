@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import { SectionProps, SpanProps } from 'react-html-props'
 import { twMerge } from 'tailwind-merge'
 
@@ -28,5 +29,31 @@ export const SlideNum = ({current, total, className, ...props}: SlideNumProps) =
 		<span className="flex flex-row text-slate-400 mt-auto" {...props}>
 			{currentFmt} / {totalFmt}
 		</span>
+	)
+}
+
+export type SlideSplitProps = SlideProps & {
+	column1Content: ReactNode,
+	column2Content: ReactNode,
+}
+export const SlideSplit = ({
+	children,
+	className,
+	slideNum,
+	column1Content,
+	column2Content,
+	...props
+}: SlideSplitProps) => {
+	return (
+		<Slide {...props}>
+			<div className ="grid grid-cols-2 h-full">
+				<section className="bg-slate-50 p-24">
+					{column1Content}
+				</section>
+				<section className="bg-white p-24">
+					{column2Content}
+				</section>
+			</div>
+		</Slide>
 	)
 }
