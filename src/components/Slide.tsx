@@ -49,10 +49,10 @@ export const SlideSplit = ({
 		<Slide {...props}>
 			<div className ="grid grid-cols-2 h-full">
 				<section className="bg-slate-50 p-24">
-					Column 1
+					{column1Content}
 				</section>
 				<section className="bg-white p-24">
-					Column 2
+					{column2Content}
 				</section>
 			</div>
 		</Slide>
