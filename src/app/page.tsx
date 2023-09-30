@@ -2,9 +2,11 @@ import { IconArrowLeft, IconArrowRight, IconBrandGithubFilled } from '@tabler/ic
 
 import { Button } from '@/components/Button';
 import { CodeBlock } from '@/components/CodeBlock';
+import { CssBlock, CssDecl } from '@/components/CssStyles';
 import { FnHeading } from '@/components/FnHeading';
 import { Header } from '@/components/Header';
 import { Heading } from '@/components/Heading';
+import { Highlight } from '@/components/Highlight';
 import { KeyValuePair } from '@/components/KeyValuePair';
 import { LinkPreview } from '@/components/LinkPreview';
 import { Slide } from '@/components/Slide';
@@ -41,7 +43,15 @@ export default function Home() {
 			</Slide>
 			<TableOfContents slideNum={{current: 2, total: 24}} />
 			<ComponentsSlide slideNum={{current: 3, total: 24}} />
-			<Slide className='p-24 gap-8' slideNum={{current: 4, total: 24}}>
+			<Slide className='p-24 gap-8'>
+				<Heading level={2}>React Hooks</Heading>
+				<div>
+					<p>
+						React Hooks allows managing whats known as the <Highlight>state</Highlight> of a component
+					</p>
+				</div>
+			</Slide>
+			<Slide className='p-24 gap-8' slideNum={{current: 3, total: 23}}>
 				<FnHeading fnName='useEffect' fnArgs={[
 					{name: 'effect'},
 					{name: 'dependencies', isOptional: true},
@@ -64,6 +74,16 @@ export default function Home() {
 					<CodeBlock language='javascript'>
 						{`const HelloWorld = () => <div>Hello World</div>;`}
 					</CodeBlock>
+				</div>
+			</Slide>
+			<Slide className='p-24 gap-8'>
+				<Heading level={2}>TailwindCSS</Heading>
+				<div className='flex flex-col gap-1'>
+					<CssBlock selector='body'>
+						<CssDecl property='font-family' value='Inter, sans-serif' />
+						<CssDecl property='font-weight' value='700' />
+						<CssDecl property='text-declaration' value='italic' />
+					</CssBlock>
 				</div>
 			</Slide>
 			<Slide className='p-24 gap-8'>
