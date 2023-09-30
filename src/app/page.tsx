@@ -8,9 +8,8 @@ import { Heading } from '@/components/Heading';
 import { KeyValuePair } from '@/components/KeyValuePair';
 import { LinkPreview } from '@/components/LinkPreview';
 import { Slide } from '@/components/Slide';
-import { ComponentsSlide } from '@/components/ComponentsSlide';
-import { SlideSplit } from '@/components/SlideSplit'
-import { TableOfContents } from '@/components/TableOfContents';
+import { ComponentsSlide } from '@/slides/ComponentsSlide';
+import { TableOfContents } from '@/slides/TableOfContentsSlide';
 
 export default function Home() {
 	return (
@@ -39,13 +38,9 @@ export default function Home() {
 			</Slide>
 			<Slide className='p-24'>
 				<Heading level={2}>What is React all about?</Heading>
-
 			</Slide>
-			
 			<TableOfContents slideNum={{current: 2, total: 24}}/>
-
 			<ComponentsSlide slideNum={{current: 3, total: 24}}/>
-
 			<Slide className='p-24 gap-8' slideNum={{current: 4, total: 24}}>
 				<FnHeading fnName='useEffect' fnArgs={[
 					{name: 'effect'},
