@@ -33,7 +33,6 @@ export const SlideNum = ({current, total, className, ...props}: SlideNumProps) =
 }
 
 export type SlideSplitProps = SlideProps & {
-	slideNum?: {current: number, total: number},
 	column1Content: ReactNode,
 	column2Content: ReactNode,
 }
