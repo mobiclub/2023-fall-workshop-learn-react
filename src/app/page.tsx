@@ -9,10 +9,10 @@ import { KeyValuePair } from '@/components/KeyValuePair';
 import { LinkPreview } from '@/components/LinkPreview';
 import { Slide } from '@/components/Slide';
 import { ComponentsSlide } from '@/slides/ComponentsSlide';
+import { IntroSlide } from '@/slides/IntroSlide';
 import { ResourcesSlide } from '@/slides/ResourcesSlide';
 import { TableOfContents } from '@/slides/TableOfContentsSlide';
 import { TitleSlide } from '@/slides/TitleSlide';
-import { IntroSlide } from '@/slides/IntroSlide';
 import { UseEffectSlide } from '@/slides/UseEffectSlide';
 import { UseStateSlide } from '@/slides/UseStateSlide';
 

@@ -1,7 +1,7 @@
+import { CodeBlock } from '@/components/CodeBlock'
+import { FnHeading } from '@/components/FnHeading'
 import { Heading } from '@/components/Heading'
 import { Slide, SlideProps } from '@/components/Slide'
-import { FnHeading } from '@/components/FnHeading'
-import { CodeBlock } from '@/components/CodeBlock'
 
 
 export type UseStateSlideProps = SlideProps

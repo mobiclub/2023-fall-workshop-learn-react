@@ -1,8 +1,9 @@
+import { IconArrowRight, IconBrandGithubFilled } from '@tabler/icons-react'
+
 import { Button } from '@/components/Button'
 import { Heading } from '@/components/Heading'
-import { Slide, SlideProps } from '@/components/Slide'
-import { IconArrowRight, IconBrandGithubFilled } from '@tabler/icons-react'
 import { KeyValuePair } from '@/components/KeyValuePair';
+import { Slide, SlideProps } from '@/components/Slide'
 
 
 export type TitleSlideProps = SlideProps
