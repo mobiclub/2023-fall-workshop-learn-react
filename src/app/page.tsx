@@ -9,8 +9,8 @@ import { KeyValuePair } from '@/components/KeyValuePair';
 import { LinkPreview } from '@/components/LinkPreview';
 import { Slide } from '@/components/Slide';
 import { ComponentsSlide } from '@/slides/ComponentsSlide';
-import { TableOfContents } from '@/slides/TableOfContentsSlide';
 import { ResourcesSlide } from '@/slides/ResourcesSlide';
+import { TableOfContents } from '@/slides/TableOfContentsSlide';
 
 export default function Home() {
 	return (
