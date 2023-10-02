@@ -22,6 +22,7 @@ export const ComponentsSlide = ({ children, className, slideNum, ...props }: Com
 					<li>Component properties</li>
 					<li>Component states</li>
 				</ol>
-			} />
+			} 
+		/>
 	)
 }
