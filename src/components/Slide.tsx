@@ -1,6 +1,19 @@
+import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
 import { ReactNode } from 'react'
-import { SectionProps, SpanProps } from 'react-html-props'
+import { DivProps, SectionProps, SpanProps } from 'react-html-props'
 import { twMerge } from 'tailwind-merge'
+
+import { Button } from '@/components/Button'
+
+export type SlideShowNavProps = Omit<DivProps, 'children'>
+export const SlideShowNav = ({className, ...props}: SlideShowNavProps) => {
+	return (
+		<div className={twMerge('fixed bottom-0 right-0 m-4 p-4 flex flex-row gap-2 z-10', className)} {...props}>
+			<Button kind="tertiary"><IconArrowLeft size={24} /></Button>
+			<Button kind="tertiary"><IconArrowRight size={24} /></Button>
+		</div>
+	)
+}
 
 export type SlideProps = SectionProps & {
 	slideNum?: {current: number, total: number}
