@@ -1,13 +1,7 @@
-import { IconArrowLeft, IconArrowRight, IconBrandGithubFilled } from '@tabler/icons-react';
+import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
 
 import { Button } from '@/components/Button';
-import { CodeBlock } from '@/components/CodeBlock';
-import { FnHeading } from '@/components/FnHeading';
 import { Header } from '@/components/Header';
-import { Heading } from '@/components/Heading';
-import { KeyValuePair } from '@/components/KeyValuePair';
-import { LinkPreview } from '@/components/LinkPreview';
-import { Slide } from '@/components/Slide';
 import { ComponentsSlide } from '@/slides/ComponentsSlide';
 import { IntroSlide } from '@/slides/IntroSlide';
 import { ResourcesSlide } from '@/slides/ResourcesSlide';
