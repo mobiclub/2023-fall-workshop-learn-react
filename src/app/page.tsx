@@ -44,7 +44,7 @@ export default function Home() {
 				{
 					layout: 'two-column',
 					content: {
-						column1: 
+						column1:
 							<header className='flex flex-col gap-2'>
 								<span>Chapter 1</span>
 								<Heading level={1}>
