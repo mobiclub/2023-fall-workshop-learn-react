@@ -1,0 +1,137 @@
+:root {
+    --color-light-gray: #f9f9f9;
+    --color-gray: #cdcdcd;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  .App {
+    box-sizing: border-box;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+  }
+  
+  .clicker-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .momo {
+    padding: 2rem;
+  
+    background: rgba(0, 0, 0, 0);
+    border: none;
+  
+    cursor: pointer;
+    transition: transform 70ms ease-in-out;
+  }
+  
+  .momo:active {
+    scale: 0.99;
+  }
+  
+  .momo-img {
+    aspect-ratio: 1/1;
+    border-radius: 1rem;
+    width: 12rem;
+  
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  
+  .hacker-section {
+    display: flex;
+    flex-direction: column;
+  
+    gap: 0.7rem;
+  }
+  
+  .hacker {
+    position: relative;
+  
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+  
+    border: solid 1px var(--color-gray);
+    border-radius: 0.3rem;
+  
+    cursor: pointer;
+    background: var(--color-light-gray);
+  
+    transition: transform 70ms ease-in-out;
+  }
+  
+  .hacker:hover:not(:active):enabled {
+    transform: scale(1.01);
+  }
+  
+  .hacker-left {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .hacker-info {
+    display: flex;
+    flex-direction: column;
+  
+    align-content: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  
+    gap: 0.5rem;
+  }
+  
+  .hacker-stats {
+    overflow: hidden;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  
+    gap: 0.1rem;
+  }
+  
+  .hacker-img {
+    aspect-ratio: 1/1;
+    width: 4rem;
+  }
+  
+  .hacker-count {
+    position: absolute;
+    transform: rotate(-35deg);
+  
+    font-size: 60px;
+    font-weight: 600;
+  }
+  
+  .hacker-cost {
+    position: absolute;
+    left: 0;
+    bottom: -0.6rem;
+  
+    padding-inline: 0.3rem;
+    padding-block: 0.1rem;
+    box-sizing: border-box;
+  
+    font-size: 18px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+  }
+  
