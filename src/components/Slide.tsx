@@ -28,7 +28,7 @@ export const SlideShow = ({slides, className, ...props}: SlideShowProps) => {
 				const { layout, content, showSlideNum, props } = slide;
 
 				return layout === 'single'
-				? <Slide slideNum={{current: i, total: slidesTotal}} showNum={showSlideNum} {...props}>
+				? <Slide slideNum={{current: i + 1, total: slidesTotal}} showNum={showSlideNum} {...props}>
 						{content}
 					</Slide>
 				 : <SlideSplit {...props}
