@@ -1,12 +1,9 @@
 import { CodeBlock } from '@/components/CodeBlock'
 import { FnHeading } from '@/components/FnHeading'
-import { Heading } from '@/components/Heading'
-import { Slide, SlideProps } from '@/components/Slide'
 
-export type UseStateSlideProps = SlideProps
-export const UseStateSlide = ({ children, className, slideNum, ...props }: UseStateSlideProps) => {
+export const UseStateSlide = () => {
 	return (
-		<Slide className='p-24 gap-8' slideNum={{current: 4, total: 23}}>
+		<>
 			<FnHeading fnName='useState' fnArgs={[
 				{name: 'initialState'},
 			]} />
@@ -17,6 +14,6 @@ export const UseStateSlide = ({ children, className, slideNum, ...props }: UseSt
 					{`const HelloWorld = () => <div>Hello World</div>;`}
 				</CodeBlock>
 			</div>
-		</Slide>
+		</>
 	)
 }
