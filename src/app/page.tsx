@@ -51,7 +51,7 @@ export default function Home() {
 									Components
 								</Heading>
 								<Heading level={2}>
-									A reuable unit of some UI
+									A reusable unit of some UI
 								</Heading>
 							</header>,
 
@@ -82,7 +82,7 @@ export default function Home() {
 					layout: 'single',
 					props: { className: "p-24 gap-8" },
 					content: <ResourcesSlide />,
-				}
+				},
 			]} />
 		</main>
 	)
