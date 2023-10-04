@@ -24,7 +24,7 @@ export const MOMOClicker = () => {
         <Momo
           coins={coins}
           setCoins={setCoins}
-          onGetRich={(income) => setCoins(coins + income)}
+          onGetRich={(income: number) => setCoins(coins + income)}
         />
       </section>
 
