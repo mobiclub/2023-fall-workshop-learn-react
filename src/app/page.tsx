@@ -5,7 +5,6 @@ import { _1_0_React } from '@/slides/_1_0_React';
 import { _1_1_History } from '@/slides/_1_1_History';
 import { _1_2_Industry } from '@/slides/_1_2_Industry';
 import { _2_0_Components } from '@/slides/_2_0_Components';
-import { _2_2_Functional } from '@/slides/_2_2_Functional';
 import { _2_4_Properties } from '@/slides/_2_4_Properties';
 import { _2_5_States } from '@/slides/_2_5_States';
 import { _2_6_vDOM } from '@/slides/_2_6_vDOM';
@@ -13,7 +12,6 @@ import { HooksTocColumn1, HooksTocColumn2 } from '@/slides/_3_0_Hooks';
 import {_3_1_HookBasics } from '@/slides/_3_1_HookBasics';
 import { AboutComponentsColumn1, AboutComponentsColumn2 } from '@/slides/AboutComponentsSlide';
 import { C1Column1, C1Column2 } from '@/slides/ComponentsSlide1';
-import { HowToCreateSlide1 } from '@/slides/HowToCreate';
 import { MOMOClicker } from '@/slides/MOMOClicker';
 import { ResourcesSlide } from '@/slides/ResourcesSlide';
 import { TitleSlide } from '@/slides/TitleSlide';
@@ -90,17 +88,6 @@ export default function Home() {
 				// 		column2: <C2Column2 />,
 				// 	}
 				// },
-				{
-					layout: 'single',
-					props: { className: "p-24 gap-8" },
-					content: <HowToCreateSlide1 />,
-				},
-				{
-					layout: 'single',
-					props: { className: "p-24 justify-between" },
-					showSlideNum: true,
-					content: <_2_2_Functional />,
-				},
 				{
 					layout: 'single',
 					props: { className: "p-24 justify-between" },

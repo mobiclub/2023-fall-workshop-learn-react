@@ -20,3 +20,16 @@ export const Heading = ({level, children, className, ...props}: HeadingProps) =>
 		</HtmlTag>
 	)
 }
+
+export type SlideHeadingProps = Omit<HeadingProps, 'children'> & {
+	heading: string,
+	subHeading: string,
+}
+export const SlideHeading = ({level, subHeading, heading, className, ...props}: SlideHeadingProps) => {
+	return (
+		<header className='flex flex-col gap-1' {...props}>
+			<span>{subHeading}</span>
+			<Heading level={level}>{heading}</Heading>
+		</header>
+	)
+}
