@@ -1,30 +1,26 @@
-import { CodeBlock } from '@/components/CodeBlock'
-import { CodeSandbox } from '@/components/CodeSandbox'
 import { Heading } from '@/components/Heading'
 
-export const _3_0_Hooks = () => {
+export const HooksTocColumn1 = () => {
 	return (
-		<div className='flex flex-row gap-8'>
-			<section>
-				<Heading level={2}>Hooks</Heading>
-				<div className="flex flex-col gap-2 max-w-[70ch]">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tincidunt volutpat interdum. Curabitur hendrerit aliquam auctor. Donec vestibulum ex eget pellentesque semper. Donec auctor bibendum erat, fermentum posuere mauris pulvinar ut.</p>
-					<p>Nullam eu sapien euismod, sagittis neque sit amet, elementum risus.</p>
-					<CodeBlock language='javascript'>
-						{`const HelloWorld = () => <div>Hello World</div>;`}
-					</CodeBlock>
-				</div>
-			</section>
-			<CodeSandbox
-				props={{
-					files: {},
-					theme: 'auto',
-					template: 'nextjs',
-					options: {
-						editorHeight: "400px",
-						editorWidthPercentage: 50,
-					}
-				}} />
-		</div>
+		<header className='flex flex-col gap-2'>
+			<span>Chapter 3</span>
+			<Heading level={1}>
+				Hooks
+			</Heading>
+			<Heading level={2}>
+				A way of managing component states
+			</Heading>
+		</header>
+	)
+}
+
+export const HooksTocColumn2 = () => {
+	return (
+		<ol className='list-decimal list-inside'>
+			<li>Hook basics</li>
+			<li>useEffect()</li>
+			<li>useState()</li>
+			<li>useCallback()</li>
+		</ol>
 	)
 }

@@ -8,7 +8,7 @@ export const _2_2_Functional = () => {
 		<div className='flex flex-row gap-8'>
 				<section>
 					<span>Chapter 2</span>
-					<Heading level={1}>Functional Components</Heading>
+					<Heading level={1}>Components</Heading>
 					<br />
 				<div className="flex flex-col gap-2 max-w-[70ch]">
 					<p></p> 

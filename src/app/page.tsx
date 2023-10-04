@@ -5,13 +5,11 @@ import { _1_0_React } from '@/slides/_1_0_React';
 import { _1_1_History } from '@/slides/_1_1_History';
 import { _1_2_Industry } from '@/slides/_1_2_Industry';
 import { _2_0_Components } from '@/slides/_2_0_Components';
-import { _2_1_ComponentBasics } from '@/slides/_2_1_ComponentBasics';
 import { _2_2_Functional } from '@/slides/_2_2_Functional';
-import { _2_3_Class } from '@/slides/_2_3_Class';
 import { _2_4_Properties } from '@/slides/_2_4_Properties';
 import { _2_5_States } from '@/slides/_2_5_States';
 import { _2_6_vDOM } from '@/slides/_2_6_vDOM';
-import {_3_0_Hooks } from '@/slides/_3_0_Hooks';
+import { HooksTocColumn1, HooksTocColumn2 } from '@/slides/_3_0_Hooks';
 import {_3_1_HookBasics } from '@/slides/_3_1_HookBasics';
 import { AboutComponentsColumn1, AboutComponentsColumn2 } from '@/slides/AboutComponentsSlide';
 import { C1Column1, C1Column2 } from '@/slides/ComponentsSlide1';
@@ -69,7 +67,6 @@ export default function Home() {
 					showSlideNum: true,
 					content: <_1_0_React />,
 				},
-				
 				{
 					layout: 'two-column',
 					content: {
@@ -102,12 +99,6 @@ export default function Home() {
 					layout: 'single',
 					props: { className: "p-24 justify-between" },
 					showSlideNum: true,
-					content: <_2_1_ComponentBasics />,
-				},
-				{
-					layout: 'single',
-					props: { className: "p-24 justify-between" },
-					showSlideNum: true,
 					content: <_2_2_Functional />,
 				},
 				{
@@ -123,10 +114,13 @@ export default function Home() {
 					content: <_2_5_States />,
 				},
 				{
-					layout: 'single',
+					layout: 'two-column',
 					props: { className: "p-24 justify-between" },
 					showSlideNum: false,
-					content: <_3_0_Hooks />,
+					content: {
+						column1: <HooksTocColumn1 />,
+						column2: <HooksTocColumn2 />,
+					}
 				},
 				{
 					layout: 'single',
@@ -157,6 +151,7 @@ export default function Home() {
 				{
 					layout: 'single',
 					props: { className: "p-24 gap-8" },
+					showSlideNum: false,
 					content: <ResourcesSlide />,
 				},
 				
