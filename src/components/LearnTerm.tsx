@@ -10,6 +10,7 @@ import {
 } from '@radix-ui/react-popover';
 import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { Highlight } from './Highlight';
 
 export type LearnTermProps = PopoverProps & {
 	term: string,
@@ -32,7 +33,7 @@ export const LearnTerm = ({term, def, popoverContentClassName}: LearnTermProps) 
 	return (
 		<PopoverRoot>
 			<PopoverTrigger asChild>
-				<mark className="bg-yellow-200 border-b border-b-yellow-500 px-2 w-auto h-auto cursor-pointer">{term}</mark>
+				<Highlight>{term}</Highlight>
 			</PopoverTrigger>
 			<PopoverPortal>
 				<PopoverContent
@@ -42,7 +43,6 @@ export const LearnTerm = ({term, def, popoverContentClassName}: LearnTermProps) 
 				<div className="flex flex-col gap-1">
 					<div className="text-l font-bold">
 						{term}
-						{/* <div className='h-[1px] w-[30%] border-b border-b-slate-200'></div> */}
 					</div>
 					<div className="text-md">{def}</div>
 				</div>
