@@ -1,5 +1,5 @@
-import { SlideHeading } from '@/components/Heading'
 import { CodeBlock } from '@/components/CodeBlock'
+import { SlideHeading } from '@/components/Heading'
 
 export const _1_1_History = () => {
 	return (

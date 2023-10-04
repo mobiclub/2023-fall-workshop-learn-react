@@ -8,9 +8,7 @@ import { _2_0_Components } from '@/slides/_2_0_Components';
 import { _2_4_Properties } from '@/slides/_2_4_Properties';
 import { _2_5_States } from '@/slides/_2_5_States';
 import { _2_6_vDOM } from '@/slides/_2_6_vDOM';
-import { HooksTocColumn1, HooksTocColumn2 } from '@/slides/_3_0_Hooks';
 import {_3_1_HookBasics } from '@/slides/_3_1_HookBasics';
-import { AboutComponentsColumn1, AboutComponentsColumn2 } from '@/slides/AboutComponentsSlide';
 import { C1Column1, C1Column2 } from '@/slides/ComponentsSlide1';
 import { MOMOClicker } from '@/slides/MOMOClicker';
 import { ResourcesSlide } from '@/slides/ResourcesSlide';
@@ -73,14 +71,6 @@ export default function Home() {
 						column2: <C1Column2 />,
 					}
 				},
-				// {
-				// 	layout: 'two-column',
-				// 	props: { className: "p-24 gap-8" },
-				// 	content: {
-				// 		column1: <C2Column1 />,
-				// 		column2: <C2Column2 />,
-				// 	}
-				// },
 				{
 					layout: 'single',
 					props: { className: "p-24 justify-between" },
