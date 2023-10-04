@@ -1,9 +1,11 @@
 import { CodeBlock } from '@/components/CodeBlock'
 import { FnHeading } from '@/components/FnHeading'
+import { Heading, SlideHeading } from '@/components/Heading'
 
 export const UseStateSlide = () => {
 	return (
 		<>
+			<span>Chapter 3</span>
 			<FnHeading fnName='useState' fnArgs={[
 				{name: 'initialState'},
 			]} />

@@ -67,13 +67,6 @@ export default function Home() {
 				},
 				{
 					layout: 'two-column',
-					content: {
-						column1: <AboutComponentsColumn1 />,
-						column2: <AboutComponentsColumn2 />,
-					}
-				},
-				{
-					layout: 'two-column',
 					props: { className: "p-24 gap-8" },
 					content: {
 						column1: <C1Column1 />,
@@ -99,15 +92,6 @@ export default function Home() {
 					props: { className: "p-24 justify-between" },
 					showSlideNum: false,
 					content: <_2_5_States />,
-				},
-				{
-					layout: 'two-column',
-					props: { className: "p-24 justify-between" },
-					showSlideNum: false,
-					content: {
-						column1: <HooksTocColumn1 />,
-						column2: <HooksTocColumn2 />,
-					}
 				},
 				{
 					layout: 'single',
