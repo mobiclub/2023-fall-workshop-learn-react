@@ -2,7 +2,7 @@ import { Heading } from '@/components/Heading'
 import { SlideProps, SlideSplit } from '@/components/Slide'
 
 export type ComponentsSlideProps = SlideProps
-export const ComponentsSlide = ({ children, className, slideNum, ...props }: ComponentsSlideProps) => {
+export const _2_0_Components = ({ children, className, slideNum, ...props }: ComponentsSlideProps) => {
 	return (
 		<SlideSplit {...props}
 			column1Content={

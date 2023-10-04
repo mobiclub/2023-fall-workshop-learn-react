@@ -1,18 +1,66 @@
+import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
 import { ReactNode } from 'react'
-import { SectionProps, SpanProps } from 'react-html-props'
+import { DivProps, SectionProps, SpanProps } from 'react-html-props'
 import { twMerge } from 'tailwind-merge'
 
-export type SlideProps = SectionProps & {
-	slideNum?: {current: number, total: number}
+import { Button } from '@/components/Button'
+import { Header } from '@/components/Header'
+
+export type SlideShowSlideLayout = SlideShowSlide['layout']
+export type SlideShowSlide = 
+	{ props?: SlideProps, showSlideNum?: boolean } & (
+		| { layout: 'single', content: ReactNode }
+		| { layout: 'two-column', content: { column1: ReactNode, column2: ReactNode } }
+	)
+
+export type SlideShowProps = Omit<DivProps, 'children'> & {
+	slides: SlideShowSlide[],
 }
-export const Slide = ({ children, className, slideNum, ...props }: SlideProps) => {
+
+export const SlideShow = ({slides, className, ...props}: SlideShowProps) => {
+	const slidesTotal = slides.length;
+
+	return (
+		<div {...props}>
+			<Header />
+			<SlideShowNav />
+			{slides.map((slide, i) => {
+				const { layout, content, showSlideNum, props } = slide;
+
+				return layout === 'single'
+				? <Slide slideNum={{current: i + 1, total: slidesTotal}} showNum={showSlideNum} {...props}>
+						{content}
+					</Slide>
+				 : <SlideSplit {...props}
+						column1Content={content.column1}
+						column2Content={content.column2} />
+			})}
+		</div>
+	)
+}
+
+export type SlideShowNavProps = Omit<DivProps, 'children'>
+export const SlideShowNav = ({className, ...props}: SlideShowNavProps) => {
+	return (
+		<div className={twMerge('fixed bottom-0 right-0 m-4 p-4 flex flex-row gap-2 z-10', className)} {...props}>
+			<Button kind="tertiary"><IconArrowLeft size={24} /></Button>
+			<Button kind="tertiary"><IconArrowRight size={24} /></Button>
+		</div>
+	)
+}
+
+export type SlideProps = SectionProps & {
+	slideNum?: {current: number, total: number},
+	showNum?: boolean,
+}
+export const Slide = ({ children, className, slideNum, showNum = true, ...props }: SlideProps) => {
 	return (
 		<section
-			className={twMerge("flex flex-col", "h-screen border-b border-b-slate-200", className)}
+			className={twMerge("flex flex-col p-24", "h-screen border-b border-b-slate-200", className)}
 			{...props}
 		>
 			{children}
-			{slideNum && <SlideNum current={slideNum.current} total={slideNum.total} />}
+			{showNum && slideNum && <SlideNum current={slideNum.current} total={slideNum.total} />}
 		</section>
 	)
 }
@@ -45,7 +93,7 @@ export const SlideSplit = ({
 	...props
 }: SlideSplitProps) => {
 	return (
-		<Slide {...props}>
+		<Slide {...props} className='p-[unset]' showNum={false}>
 			<div className ="grid grid-cols-2 h-full">
 				<section className="bg-slate-50 p-24">
 					{column1Content}

@@ -1,10 +1,10 @@
+import { Heading } from '@/components/Heading'
 import { LinkPreview } from '@/components/LinkPreview'
-import { Slide } from '@/components/Slide'
 
 export const ResourcesSlide = () => {
 	return (
-		<Slide className='p-24 gap-8'>
-			<h2 className="text-2xl">Where to go from here?</h2>
+		<>
+			<Heading level={2}>Where to go from here?</Heading>
 			<div className="grid grid-cols-3 gap-4">
 				<LinkPreview
 					siteName='React Docs'
@@ -30,7 +30,11 @@ export const ResourcesSlide = () => {
 					siteName='Reactiflux Discod'
 					url='https://discord.gg/reactiflux'
 					desc='A friendly, online Discord community with over 200K members. Frequently hosts Q&As with engineers in the industry!' />
+				<LinkPreview
+					siteName='Tailwind'
+					url='https://tailwindcss.com/'
+					desc='A utility-first CSS framework for rapidly building custom designs.' />
 			</div>
-		</Slide>
+		</>
 	)
 }

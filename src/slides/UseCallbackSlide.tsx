@@ -1,11 +1,11 @@
 import { CodeBlock } from '@/components/CodeBlock'
 import { FnHeading } from '@/components/FnHeading'
 
-export const UseEffectSlide = () => {
+export const UseCallbackSlide = () => {
 	return (
 		<div className='flex flex-col gap-8'>
-			<FnHeading fnName='useEffect' fnArgs={[
-				{name: 'effect'},
+			<FnHeading fnName='useCallback' fnArgs={[
+				{name: 'computeValue'},
 				{name: 'dependencies', isOptional: true},
 			]} />
 			<div className="flex flex-col gap-2 max-w-[70ch]">
