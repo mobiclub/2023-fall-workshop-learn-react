@@ -2,8 +2,6 @@
 import { Heading } from '@/components/Heading';
 import { SlideShow } from '@/components/Slide';
 import { _1_0_React } from '@/slides/_1_0_React';
-import { _1_1_History } from '@/slides/_1_1_History';
-import { _1_2_Industry } from '@/slides/_1_2_Industry';
 import { _2_0_Components } from '@/slides/_2_0_Components';
 import { _2_4_Properties } from '@/slides/_2_4_Properties';
 import { _2_5_States } from '@/slides/_2_5_States';
@@ -44,18 +42,6 @@ export default function Home() {
 								<li>MOMO Clicker!</li>
 							</ol>
 					}
-				},
-				{
-					layout: 'single',
-					props: { className: "p-24 justify-between" },
-					showSlideNum: true,
-					content: <_1_1_History />,
-				},
-				{
-					layout: 'single',
-					props: { className: "p-24 justify-between" },
-					showSlideNum: true,
-					content: <_1_2_Industry />,
 				},
 				{
 					layout: 'single',
