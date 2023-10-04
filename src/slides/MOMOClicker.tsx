@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import Hacker from "./../components/Hacker.jsx";
 import Momo from "./../components/Momo.jsx";
+import { CodeBlock } from "@/components/CodeBlock";
 
 export const MOMOClicker = () => {
   const [coins, setCoins] = useState(0);
@@ -51,11 +52,18 @@ export const MOMOClicker = () => {
           production={20}
           coins={coins}
         />
+        <CodeBlock language='javascript' Url='https://codesandbox.io/s/cool-framework-f3sc82?file=/src/App.js'>
+					{ComponentExample}
+				</CodeBlock>
       </section>
     </div>
   );
 }
 
+const ComponentExample = `
+
+See the code for yourself!
+`
 /*
   - add rest of hackers
   - style hackers

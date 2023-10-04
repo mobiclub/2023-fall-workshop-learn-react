@@ -11,7 +11,6 @@ import { C1Column1, C1Column2 } from '@/slides/ComponentsSlide1';
 import { MOMOClicker } from '@/slides/MOMOClicker';
 import { ResourcesSlide } from '@/slides/ResourcesSlide';
 import { TitleSlide } from '@/slides/TitleSlide';
-import { UseCallbackSlide } from '@/slides/UseCallbackSlide';
 import { UseEffectSlide } from '@/slides/UseEffectSlide';
 import { UseStateSlide } from '@/slides/UseStateSlide';
 
@@ -88,11 +87,6 @@ export default function Home() {
 				{
 					layout: 'single',
 					props: { className: "p-24 gap-8" },
-					content: <UseCallbackSlide />,
-				},
-				{
-					layout: 'single',
-					props: { className: "p-24 gap-8" },
 					content: <MOMOClicker />,
 				},
 				{
@@ -101,7 +95,6 @@ export default function Home() {
 					showSlideNum: false,
 					content: <ResourcesSlide />,
 				},
-				
 			]} />
 		</main>
 	)

@@ -22,8 +22,6 @@ export const SlideShow = ({slides, className, ...props}: SlideShowProps) => {
 
 	return (
 		<div {...props}>
-			<Header />
-			<SlideShowNav />
 			{slides.map((slide, i) => {
 				const { layout, content, showSlideNum, props } = slide;
 
