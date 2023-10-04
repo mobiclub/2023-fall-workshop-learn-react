@@ -4,7 +4,7 @@ import { LearnTerm } from '@/components/LearnTerm'
 
 export const C1Column1 = () => {
 	return (
-		<SlideHeading level={1} subHeading='Chapter 1' heading='What is a component?' />
+		<SlideHeading level={1} subHeading='Chapter 2' heading='What is a component?' />
 	)
 }
 

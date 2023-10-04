@@ -3,7 +3,7 @@ import { Heading } from '@/components/Heading'
 export const AboutComponentsColumn1 = () => {
 	return (
 		<header className='flex flex-col gap-2'>
-			<span>Chapter 1</span>
+			<span>Chapter 2</span>
 			<Heading level={1}>
 				Components
 			</Heading>
