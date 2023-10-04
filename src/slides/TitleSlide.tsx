@@ -1,4 +1,5 @@
 import { IconArrowRight, IconBrandGithubFilled } from '@tabler/icons-react'
+import Link from 'next/link';
 
 import { Button } from '@/components/Button'
 import { Heading } from '@/components/Heading'
@@ -14,7 +15,9 @@ export const TitleSlide = () => {
 				</div>
 				<div className="flex flex-row gap-4">
 					<Button kind='primary'>Enter <IconArrowRight size={24} /></Button>
-					<Button kind='secondary'><IconBrandGithubFilled size={24} /> Source code</Button>
+					<Link href="https://github.com/mobi-uta/2023-fall-workshop-learn-react/" className="flex flex-row items-center justify-center gap-4 border-2 border-slate-800 rounded-md py-2 px-4">
+						<IconBrandGithubFilled size={24} /> Source code
+					</Link>
 				</div>
 			</header>
 			<section className="flex flex-row gap-8">

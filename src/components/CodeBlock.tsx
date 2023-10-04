@@ -1,10 +1,10 @@
 import { IconExternalLink } from '@tabler/icons-react'
+import Link from 'next/link'
 import { SyntaxHighlighterProps } from 'react-syntax-highlighter'
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/default-highlight'
 import { twMerge } from 'tailwind-merge'
 
 import { Button } from '@/components/Button'
-import Link from 'next/link'
 
 export type CodeBlockProps = SyntaxHighlighterProps & {
 	canCopy?: boolean,

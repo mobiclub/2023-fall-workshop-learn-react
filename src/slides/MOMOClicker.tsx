@@ -2,9 +2,10 @@ import "./../styles.css";
 
 import { useState } from "react";
 
+import { CodeBlock } from "@/components/CodeBlock";
+
 import Hacker from "./../components/Hacker.jsx";
 import Momo from "./../components/Momo.jsx";
-import { CodeBlock } from "@/components/CodeBlock";
 
 export const MOMOClicker = () => {
   const [coins, setCoins] = useState(0);
