@@ -29,6 +29,10 @@ export const ResourcesSlide = () => {
 					siteName='Reactiflux Discod'
 					url='https://discord.gg/reactiflux'
 					desc='A friendly, online Discord community with over 200K members. Frequently hosts Q&As with engineers in the industry!' />
+				<LinkPreview
+					siteName='Tailwind'
+					url='https://tailwindcss.com/'
+					desc='A utility-first CSS framework for rapidly building custom designs.' />
 			</div>
 		</>
 	)
