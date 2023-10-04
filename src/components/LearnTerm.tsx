@@ -10,6 +10,7 @@ import {
 } from '@radix-ui/react-popover';
 import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
+
 import { Highlight } from './Highlight';
 
 export type LearnTermProps = PopoverProps & {

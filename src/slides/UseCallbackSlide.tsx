@@ -4,7 +4,7 @@ import { FnHeading } from '@/components/FnHeading'
 export const UseCallbackSlide = () => {
 	return (
 		<>
-			<FnHeading fnName='useHook' fnArgs={[
+			<FnHeading fnName='useCallback' fnArgs={[
 				{name: 'computeValue'},
 				{name: 'dependencies', isOptional: true},
 			]} />

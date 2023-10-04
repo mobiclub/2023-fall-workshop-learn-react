@@ -1,7 +1,8 @@
-import { Heading } from '@/components/Heading'
 import { IconExternalLink } from '@tabler/icons-react'
 import Link, { LinkProps } from 'next/link'
 import { twMerge } from 'tailwind-merge'
+
+import { Heading } from '@/components/Heading'
 
 export const _1_2_Industry = () => {
 	const styles = twMerge(

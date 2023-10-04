@@ -11,6 +11,7 @@ export const Heading = ({level, children, className, ...props}: HeadingProps) =>
 	const styles = twMerge(
 		level === 1 && 'text-5xl font-medium',
 		level === 2 && 'text-2xl',
+		level === 3 && 'text-xl font-medium',
 	)
 
 	return (

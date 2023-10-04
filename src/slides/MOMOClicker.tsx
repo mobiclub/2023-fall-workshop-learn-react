@@ -1,7 +1,9 @@
-import { useState } from "react";
-import Momo from "./../components/Momo.jsx";
-import Hacker from "./../components/Hacker.jsx";
 import "./../styles.css";
+
+import { useState } from "react";
+
+import Hacker from "./../components/Hacker.jsx";
+import Momo from "./../components/Momo.jsx";
 
 export const MOMOClicker = () => {
   const [coins, setCoins] = useState(0);

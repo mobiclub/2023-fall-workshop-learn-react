@@ -1,9 +1,10 @@
+import { Heading } from '@/components/Heading'
 import { LinkPreview } from '@/components/LinkPreview'
 
 export const ResourcesSlide = () => {
 	return (
 		<>
-			<h2 className="text-2xl">Where to go from here?</h2>
+			<Heading level={2}>Where to go from here?</Heading>
 			<div className="grid grid-cols-3 gap-4">
 				<LinkPreview
 					siteName='React Docs'

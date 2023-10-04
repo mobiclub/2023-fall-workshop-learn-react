@@ -1,6 +1,7 @@
+import "../styles.css";
+
 import { useEffect, useState } from "react";
 import { useInterval } from "react-interval-hook";
-import "../styles.css";
 
 const Hacker = ({
   handleHacks,
@@ -26,7 +27,7 @@ const Hacker = ({
     if (count === 1) {
       start();
     }
-  }, [count]);
+  }, [start, count]);
 
   return (
     <button

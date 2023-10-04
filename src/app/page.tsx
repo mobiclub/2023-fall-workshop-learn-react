@@ -1,12 +1,6 @@
 "use client"; // This is a client component 👈🏽
 import { Heading } from '@/components/Heading';
 import { SlideShow } from '@/components/Slide';
-import { ResourcesSlide } from '@/slides/ResourcesSlide';
-import { TitleSlide } from '@/slides/TitleSlide';
-import { UseCallbackSlide } from '@/slides/UseCallbackSlide';
-import { UseEffectSlide } from '@/slides/UseEffectSlide';
-import { UseStateSlide } from '@/slides/UseStateSlide';
-import { MOMOClicker } from '@/slides/MOMOClicker';
 import { _1_0_React } from '@/slides/_1_0_React';
 import { _1_1_History } from '@/slides/_1_1_History';
 import { _1_2_Industry } from '@/slides/_1_2_Industry';
@@ -19,7 +13,15 @@ import { _2_5_States } from '@/slides/_2_5_States';
 import { _2_6_vDOM } from '@/slides/_2_6_vDOM';
 import {_3_0_Hooks } from '@/slides/_3_0_Hooks';
 import {_3_1_HookBasics } from '@/slides/_3_1_HookBasics';
-
+import { AboutComponentsColumn1, AboutComponentsColumn2 } from '@/slides/AboutComponentsSlide';
+import { C1Column1, C1Column2 } from '@/slides/ComponentsSlide1';
+import { HowToCreateSlide1 } from '@/slides/HowToCreate';
+import { MOMOClicker } from '@/slides/MOMOClicker';
+import { ResourcesSlide } from '@/slides/ResourcesSlide';
+import { TitleSlide } from '@/slides/TitleSlide';
+import { UseCallbackSlide } from '@/slides/UseCallbackSlide';
+import { UseEffectSlide } from '@/slides/UseEffectSlide';
+import { UseStateSlide } from '@/slides/UseStateSlide';
 
 export default function Home() {
 	return (
@@ -27,7 +29,7 @@ export default function Home() {
 			<SlideShow slides={[
 				{
 					layout: 'single',
-					props: { className: "p-24 justify-between" },
+					props: { className: "justify-between gap-[unset]" },
 					showSlideNum: false,
 					content: <TitleSlide />,
 				},
@@ -71,24 +73,30 @@ export default function Home() {
 				{
 					layout: 'two-column',
 					content: {
-						column1:
-							<header className='flex flex-col gap-2'>
-								<span>Chapter 2</span>
-								<Heading level={1}>
-									Components
-								</Heading>
-								<Heading level={2}>
-									A reusable unit of some UI
-								</Heading>
-							</header>,
-
-						column2:
-						<ol className='list-decimal list-inside'>
-							<li>Functional components</li>
-							<li>Component properties</li>
-							<li>Component states</li>
-						</ol>,
+						column1: <AboutComponentsColumn1 />,
+						column2: <AboutComponentsColumn2 />,
 					}
+				},
+				{
+					layout: 'two-column',
+					props: { className: "p-24 gap-8" },
+					content: {
+						column1: <C1Column1 />,
+						column2: <C1Column2 />,
+					}
+				},
+				// {
+				// 	layout: 'two-column',
+				// 	props: { className: "p-24 gap-8" },
+				// 	content: {
+				// 		column1: <C2Column1 />,
+				// 		column2: <C2Column2 />,
+				// 	}
+				// },
+				{
+					layout: 'single',
+					props: { className: "p-24 gap-8" },
+					content: <HowToCreateSlide1 />,
 				},
 				{
 					layout: 'single',
@@ -151,6 +159,7 @@ export default function Home() {
 					props: { className: "p-24 gap-8" },
 					content: <ResourcesSlide />,
 				},
+				
 			]} />
 		</main>
 	)

@@ -56,7 +56,7 @@ export type SlideProps = SectionProps & {
 export const Slide = ({ children, className, slideNum, showNum = true, ...props }: SlideProps) => {
 	return (
 		<section
-			className={twMerge("flex flex-col", "h-screen border-b border-b-slate-200", className)}
+			className={twMerge("flex flex-col p-24", "h-screen border-b border-b-slate-200", className)}
 			{...props}
 		>
 			{children}
@@ -93,7 +93,7 @@ export const SlideSplit = ({
 	...props
 }: SlideSplitProps) => {
 	return (
-		<Slide {...props} showNum={false}>
+		<Slide {...props} className='p-[unset]' showNum={false}>
 			<div className ="grid grid-cols-2 h-full">
 				<section className="bg-slate-50 p-24">
 					{column1Content}
